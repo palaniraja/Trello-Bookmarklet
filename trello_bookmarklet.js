@@ -37,8 +37,14 @@
       // We're looking at a redmine issue
       name = $("#content h2:first").text().trim() + ": " + $("#content h3:first").text().trim();
 
-    } else if(desc.match(/salesforce.com/)){
-      alert('Yes salesforce');
+    } else if(desc.match(/salesforce.com\/500/)){
+      name =  'Case:' + $('h2.pageDescription').text().trim() + ' ' + $('td:contains(Subject)').closest('td').next().text().trim();
+
+      if($('td.dataCell').eq(0).text().trim().length){
+        desc = 	 $('td.dataCell').eq(0).text().trim() + '\n\n\n' + location.href;	
+      }else{
+      	desc = 	 $('td:contains(Description)').closest('td').next().text().trim() + '\n\n\n' + location.href;
+      }
     } else {
 
       // It isn't anything we recognize, but we'll see if we can make something using the selected text
