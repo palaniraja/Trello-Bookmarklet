@@ -40,7 +40,7 @@
     } else if(desc.match(/salesforce.com\/500/)){
       name =  'Case:' + $('h2.pageDescription').text().trim() + ' ' + $('td:contains(Subject)').closest('td').next().text().trim();
 
-      if($('span.listTitle:contains(Case Comments[0])').length){
+      if($('span.listTitle:contains(Case Comments[0])').length != 0){
         desc = 	 $('td.dataCell').eq(0).text().trim() + '\n\n\n' + location.href;	
       }else{
       	desc = 	 $('td:contains(Description)').closest('td').next().text().trim() + '\n\n\n' + location.href;
