@@ -5,6 +5,7 @@ javascript:(function(a){window.trelloAppKey="optional";window.trelloIdList="opti
 This is a <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a> you can use to create a card in <a href="https://trello.com">Trello</a> from ...
 
  - FogBugz cases
+ - Salesforce cases - Copies Case subject as description or recent comment if exists.
  - JIRA issues
  - GitHub issues and commits
  - The selected text from an arbitrary URL
